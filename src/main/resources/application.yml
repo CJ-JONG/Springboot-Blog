@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/blogdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate.format_sql: true
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+  h2:
+    console:
+      enabled: true
+  jwt:
+    issuer: ajufresh@gmail.com
+    secret_key: study-springboot
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug
